@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estato — Rare Properties. Exceptional Representation.</title>
+  <meta name="description" content="A boutique real estate firm specializing in architecturally significant homes and investment-grade estates in Beverly Hills, Bel Air, and Malibu." />
+  <meta name="theme-color" content="#0E0C0A" />
+  <meta property="og:title"       content="Estato — Luxury Real Estate" />
+  <meta property="og:description" content="Rare Properties. Exceptional Representation." />
+  <meta property="og:type"        content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230E0C0A'/><text x='50%' y='62%' dominant-baseline='middle' text-anchor='middle' fill='%23C9A96E' font-size='16' font-family='Georgia,serif' letter-spacing='2'>E</text></svg>" />
+</head>
+<body>
+
+<!-- Custom cursor (desktop only) -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- ============================================================
+     MODAL
+     ============================================================ -->
+<div class="modal-backdrop" id="modal-backdrop">
+  <div class="modal-panel" id="modal-panel">
+    <div class="modal-panel-header">
+      <span class="modal-panel-title" id="modal-panel-title"></span>
+      <button class="modal-panel-close" id="modal-panel-close" aria-label="Close">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-panel-body" id="modal-panel-body"></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     MOBILE
+     ============================================================ -->
+<div class="mobile-overlay" id="mobile-overlay"></div>
+<div class="mobile-drawer" id="mobile-drawer">
+  <div class="mobile-drawer-header">
+    <span class="mobile-drawer-logo">ESTAT<span>O</span></span>
+    <button class="mobile-close-btn" id="mobile-drawer-close" aria-label="Close menu">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-nav-links" id="mobile-nav-links" aria-label="Mobile nav"></nav>
+  <div class="mobile-drawer-footer">
+    <a href="#contact" class="btn-gold" data-calendar>Private Inquiry</a>
+    <button class="btn-concierge vapi-voice-btn">
+      <span class="concierge-dot"></span> AI Concierge
+    </button>
+  </div>
+</div>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<header id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">ESTAT<span>O</span></a>
+      <nav id="nav-links" class="nav-links" aria-label="Main navigation"></nav>
+      <div class="nav-right">
+        <button class="btn-concierge vapi-voice-btn">
+          <span class="concierge-dot"></span> AI Concierge
+        </button>
+        <a href="#contact" class="btn-nav">Private Inquiry</a>
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-bg-grid"></div>
+  <div class="hero-bg-overlay"></div>
+
+  <!-- Architectural illustration panel -->
+  <div class="hero-illustration">
+    <div class="hero-arch-frame">
+      <div class="hero-arch-inner">
+        <div class="hero-arch-lines"></div>
+        <div class="hero-arch-glow"></div>
+        <div class="hero-arch-label">
+          <span class="hero-arch-address">27 Malibu Colony Road</span>
+          <div class="hero-arch-price">$19,500,000</div>
+          <div class="hero-arch-details">
+            <span class="hero-arch-detail">6 BD</span>
+            <span class="hero-arch-detail">8 BA</span>
+            <span class="hero-arch-detail">10,200 SF</span>
+            <span class="hero-arch-detail">Oceanfront</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Property count badge -->
+  <div class="hero-property-count">
+    <div class="hpc-number">6</div>
+    <div class="hpc-text">Current Properties</div>
+  </div>
+
+  <!-- Hero content -->
+  <div class="container" style="position:relative;z-index:2;padding-bottom:0;">
+    <div class="hero-content">
+      <div class="eyebrow on-dark hero-eyebrow" id="hero-eyebrow">Beverly Hills · Bel Air · Malibu</div>
+      <h1 class="hero-headline" id="hero-headline">Where architecture<br>meets <em>legacy.</em></h1>
+      <p class="hero-sub" id="hero-sub"></p>
+      <div class="hero-actions">
+        <a href="#listings" class="btn-gold">
+          View Current Properties
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn-outline-light">Private Inquiry</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="hero-scroll-cue">
+    <div class="scroll-label">Scroll</div>
+    <div class="scroll-track"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     STATS STRIP
+     ============================================================ -->
+<div id="stats-strip">
+  <div class="container-wide">
+    <div class="stats-inner" id="stats-strip-inner">
+      <!-- Built by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     LISTINGS
+     ============================================================ -->
+<section id="listings">
+  <div class="container">
+
+    <div class="listings-header">
+      <div class="listings-headline-wrap">
+        <div class="eyebrow listings-eyebrow">Current Properties</div>
+        <h2 class="display-headline listings-headline" style="margin-top:18px;">Current <em>Properties</em></h2>
+      </div>
+      <a href="#contact" class="listings-view-all">
+        Request full portfolio
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="listings-grid" id="listings-grid">
+      <!-- Built by JS -->
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     APPROACH
+     ============================================================ -->
+<section id="approach">
+  <div class="container">
+    <div class="approach-inner">
+
+      <div class="approach-left">
+        <div class="eyebrow on-dark approach-eyebrow">Our Approach</div>
+        <h2 class="display-headline on-dark approach-headline" style="margin-top:18px;font-size:clamp(2rem,3.5vw,3rem);" id="approach-headline-text">Our approach to<br>the extraordinary.</h2>
+        <p class="approach-text" id="approach-text"></p>
+        <a href="#contact" class="btn-outline-light" style="margin-top:8px;">
+          Work With Us
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="approach-pillars" id="approach-pillars">
+        <!-- Built by JS -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="testimonials-header">
+      <div class="eyebrow muted testimonials-eyebrow">What Clients Say</div>
+      <h2 class="display-headline testimonials-headline" style="margin-top:18px;">The <em>results</em> speak.</h2>
+    </div>
+    <div class="testimonials-grid" id="testimonials-grid">
+      <!-- Built by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TEAM
+     ============================================================ -->
+<section id="team">
+  <div class="container">
+    <div class="team-header">
+      <div class="eyebrow team-eyebrow">Our Team</div>
+      <h2 class="display-headline team-headline" style="margin-top:18px;">The people behind<br>the <em>properties.</em></h2>
+      <p class="team-sub" style="margin-top:14px;">A small, senior team. Everyone you work with has personally closed over $100M in transactions.</p>
+    </div>
+    <div class="team-grid" id="team-grid">
+      <!-- Built by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     AREAS
+     ============================================================ -->
+<section id="areas">
+  <div class="container">
+    <div class="areas-header">
+      <div class="eyebrow on-dark areas-eyebrow">Markets</div>
+      <h2 class="display-headline on-dark areas-headline" style="margin-top:18px;">The markets<br>we know <em>best.</em></h2>
+    </div>
+    <div class="areas-list" id="areas-list">
+      <!-- Built by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     JOURNAL
+     ============================================================ -->
+<section id="journal">
+  <div class="container">
+    <div class="journal-header">
+      <div>
+        <div class="eyebrow journal-eyebrow">From the Journal</div>
+        <h2 class="display-headline journal-headline" style="margin-top:16px;">Market <em>Intelligence.</em></h2>
+      </div>
+      <a href="#" class="btn-text-arrow">
+        Read all articles
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="journal-posts" id="journal-posts">
+      <!-- Built by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-left">
+        <div class="eyebrow on-dark contact-eyebrow">Private Inquiry</div>
+        <h2 class="display-headline on-dark contact-headline" style="margin-top:18px;">
+          Every significant<br>transaction begins<br>with a <em>conversation.</em>
+        </h2>
+        <p class="contact-sub">Tell us what you're looking for. We'll tell you what's available — including properties that have never been publicly listed.</p>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value"><a href="mailto:hello@estato.co" data-email>hello@estato.co</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Phone</div>
+              <div class="contact-item-value"><a href="tel:+13100000000" data-phone>+1 (310) 000-0000</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Office</div>
+              <div class="contact-item-value" data-address>432 Wilshire Blvd, Suite 1200</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-socials">
+          <a href="#" class="contact-social" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="contact-social" aria-label="LinkedIn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="contact-social" aria-label="YouTube">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" class="contact-social" aria-label="Twitter">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4l16 16M4 20L20 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-box">
+        <div class="form-title">Begin Your Search</div>
+        <div class="form-subtitle">We respond within 24 hours. All inquiries are held in strict confidence.</div>
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="fname">First Name</label>
+              <input class="form-input" id="fname" type="text" placeholder="James" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lname">Last Name</label>
+              <input class="form-input" id="lname" type="text" placeholder="Harrison" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="femail">Email Address</label>
+            <input class="form-input" id="femail" type="email" placeholder="james@domain.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="fphone">Phone (Optional)</label>
+            <input class="form-input" id="fphone" type="tel" placeholder="+1 (000) 000-0000" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ftype">I Am A</label>
+            <select class="form-input form-select" id="ftype">
+              <option value="" disabled selected>Select…</option>
+              <option value="buyer">Buyer — actively searching</option>
+              <option value="seller">Seller — ready to list</option>
+              <option value="investor">Investor — portfolio acquisition</option>
+              <option value="exploring">Just exploring</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="fbudget">Budget / Price Range</label>
+            <select class="form-input form-select" id="fbudget">
+              <option value="" disabled selected>Select range…</option>
+              <option>$3M – $7M</option>
+              <option>$7M – $15M</option>
+              <option>$15M – $30M</option>
+              <option>$30M+</option>
+              <option>Flexible / Investment</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="fmessage">Tell Us More</label>
+            <textarea class="form-textarea" id="fmessage" placeholder="What are you looking for? Architectural style, neighborhood, timeline, anything that helps us understand your vision…"></textarea>
+          </div>
+          <button type="submit" class="form-submit-btn">Submit Private Inquiry</button>
+          <p class="form-note">By submitting, you agree to our <a href="#" data-modal="privacy">Privacy Policy</a>. All inquiries are kept in strict confidence.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA BANNER
+     ============================================================ -->
+<section id="cta-banner">
+  <div class="cta-bg-watermark">Estato</div>
+  <div class="container">
+    <div class="cta-inner">
+      <div class="eyebrow muted cta-eyebrow">The Invisible Market</div>
+      <h2 class="display-headline cta-headline" style="margin-top:20px;">
+        The home you're looking for<br>may not be listed <em>anywhere.</em>
+      </h2>
+      <p class="cta-sub">60% of our transactions happen before a property ever reaches the market. Let's have a conversation.</p>
+      <div class="cta-actions">
+        <a href="#contact" class="btn-gold">
+          Request Private Access
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <button class="btn-outline vapi-voice-btn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 1 3 3v7a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+          Speak to AI Concierge
+        </button>
+      </div>
+      <p class="cta-note">All inquiries treated with complete discretion.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-main">
+      <div>
+        <span class="footer-brand-name">ESTAT<span>O</span></span>
+        <div class="footer-brand-tagline" data-firm-tagline>Rare Properties. Exceptional Representation.</div>
+        <p class="footer-brand-desc">A boutique firm. A singular focus. The most significant homes in Southern California.</p>
+        <div class="footer-social-row">
+          <a href="#" class="footer-social" aria-label="Instagram">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="footer-social" aria-label="LinkedIn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="footer-social" aria-label="YouTube">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <span class="footer-col-title">Explore</span>
+        <ul class="footer-links">
+          <li><a href="#listings">Current Properties</a></li>
+          <li><a href="#approach">Our Approach</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#areas">Markets</a></li>
+          <li><a href="#journal">Journal</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="footer-col-title">Services</span>
+        <ul class="footer-links">
+          <li><a href="#contact">Buyer Representation</a></li>
+          <li><a href="#contact">Seller Representation</a></li>
+          <li><a href="#contact" class="gold">Off-Market Access</a></li>
+          <li><a href="#contact">Investment Advisory</a></li>
+          <li><a href="#contact">Portfolio Acquisitions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="footer-col-title">Contact</span>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@estato.co" data-email>hello@estato.co</a></li>
+          <li><a href="tel:+13100000000" data-phone>+1 (310) 000-0000</a></li>
+          <li><a href="#contact" data-address>432 Wilshire Blvd</a></li>
+          <li><a href="#contact" data-city>Beverly Hills, CA 90210</a></li>
+          <li><a href="#contact" data-calendar class="gold" style="margin-top:4px;display:inline-block;">Book a Consultation →</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">© <span data-legal-year>2026</span> <span data-legal-name>Estato Realty Group LLC</span>. All rights reserved. DRE #00000000.</span>
+      <div class="footer-legal-links">
+        <a href="#" data-modal="privacy">Privacy Policy</a>
+        <a href="#" data-modal="terms">Terms &amp; Conditions</a>
+        <a href="#" data-modal="terms">Fair Housing Notice</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="config.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
