@@ -445,11 +445,10 @@ section { position: relative; }
   min-height: 100svh;
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  align-items: stretch;
   overflow: hidden;
   background: var(--near-black);
-  padding-top: 80px; /* clear fixed navbar */
 }
 
 /* Cinematic background */
@@ -475,30 +474,28 @@ section { position: relative; }
 
 /* Architectural illustration — abstract property silhouette */
 .hero-illustration {
-  position: absolute;
-  right: 0; top: 0; bottom: 0;
+  position: relative;
   width: 50%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
   overflow: hidden;
-  /* Gradient mask so illustration fades into hero bg on left edge */
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%);
   mask-image: linear-gradient(to right, transparent 0%, black 12%);
 }
 .hero-arch-frame {
-  position: absolute;
-  top: 60px; right: 60px; bottom: 60px;
-  width: calc(100% - 120px);
+  position: relative;
+  flex: 1;
+  margin: 60px 60px 60px 0;
   border: 1px solid rgba(201,169,110,0.1);
   border-radius: var(--r-lg);
   overflow: hidden;
 }
 .hero-arch-inner {
-  width: 100%; height: 100%;
+  position: absolute;
+  inset: 0;
   background: linear-gradient(145deg, #1A1610 0%, #232018 40%, #1A1A14 100%);
-  position: relative;
-  display: flex; align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 /* Abstract architecture lines */
 .hero-arch-lines {
@@ -567,10 +564,11 @@ section { position: relative; }
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 0 40px 0 7vw;
-  width: 48%;
-  max-width: 580px;
-  min-width: 280px;
+  width: 50%;
+  padding: 160px 48px 80px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: left;
 }
 .hero-eyebrow { margin-bottom: 28px; }
