@@ -449,6 +449,7 @@ section { position: relative; }
   justify-content: flex-end;
   overflow: hidden;
   background: var(--near-black);
+  padding-top: 80px; /* clear fixed navbar */
 }
 
 /* Cinematic background */
@@ -567,16 +568,17 @@ section { position: relative; }
   position: relative;
   z-index: 2;
   padding: 0 0 80px;
-  width: 46%;
-  max-width: 560px;
-  min-width: 320px;
+  width: 42%;
+  max-width: 520px;
+  min-width: 300px;
   text-align: left;
   align-self: flex-start;
+  padding-right: 24px; /* extra gutter from illustration */
 }
 .hero-eyebrow { margin-bottom: 28px; }
 .hero-headline {
   font-family: var(--serif);
-  font-size: clamp(3.2rem, 6vw, 6.5rem);
+  font-size: clamp(2.8rem, 5vw, 5.5rem);
   font-weight: 300;
   line-height: 1.04;
   letter-spacing: -0.03em;
