@@ -510,6 +510,13 @@ function initAnimations() {
     gsap.set(targets, { willChange: 'auto' });
   };
 
+  // Safety: ensure all elements visible before GSAP takes over
+  ['.stat-cell','.listing-card','.approach-left','.pillar-card',
+   '.testimonial-card','.agent-card','.area-row','.journal-card',
+   '.contact-left','.contact-form-box'].forEach(sel => {
+    document.querySelectorAll(sel).forEach(el => { el.style.opacity = '1'; });
+  });
+
   // ---- Hero entrance ----
   const htl = gsap.timeline({ defaults: { ease: 'power3.out' } });
   htl
@@ -525,12 +532,14 @@ function initAnimations() {
   // ---- Stats strip ----
   gsap.from('.stat-cell', {
     opacity: 0, y: 28, stagger: 0.1, duration: 0.75, ease: 'power2.out',
+    immediateRender: false,
     scrollTrigger: { trigger: '#stats-strip', start: 'top 95%', once: true, invalidateOnRefresh: true },
   });
 
   // ---- Listings ----
   gsap.from('.listing-card', {
     opacity: 0, y: 32, scale: 0.97, stagger: 0.08, duration: 0.7, ease: 'power2.out',
+    immediateRender: false,
     scrollTrigger: { trigger: '#listings', start: 'top 95%', once: true, invalidateOnRefresh: true },
     onComplete() { onDone('.listing-card'); }
   });
@@ -538,10 +547,12 @@ function initAnimations() {
   // ---- Approach ----
   gsap.from('.approach-left', {
     opacity: 0, x: -32, duration: 0.9, ease: 'power2.out',
+    immediateRender: false,
     scrollTrigger: { trigger: '#approach', start: 'top 95%', once: true, invalidateOnRefresh: true },
   });
   gsap.from('.pillar-card', {
     opacity: 0, y: 24, stagger: 0.12, duration: 0.7, ease: 'power2.out',
+    immediateRender: false,
     scrollTrigger: { trigger: '#approach', start: 'top 95%', once: true, invalidateOnRefresh: true },
     onComplete() { onDone('.pillar-card'); }
   });
@@ -549,6 +560,7 @@ function initAnimations() {
   // ---- Testimonials ----
   gsap.from('.testimonial-card', {
     opacity: 0, y: 28, stagger: 0.15, duration: 0.75, ease: 'power2.out',
+    immediateRender: false,
     scrollTrigger: { trigger: '#testimonials', start: 'top 95%', once: true, invalidateOnRefresh: true },
     onComplete() { onDone('.testimonial-card'); }
   });
@@ -556,6 +568,7 @@ function initAnimations() {
   // ---- Team ----
   gsap.from('.agent-card', {
     opacity: 0, y: 28, scale: 0.97, stagger: 0.12, duration: 0.75, ease: 'power2.out',
+    immediateRender: false,
     scrollTrigger: { trigger: '#team', start: 'top 95%', once: true, invalidateOnRefresh: true },
     onComplete() { onDone('.agent-card'); }
   });
@@ -563,6 +576,7 @@ function initAnimations() {
   // ---- Areas rows — slide in from left ----
   gsap.from('.area-row', {
     opacity: 0, x: -24, stagger: 0.1, duration: 0.7, ease: 'power2.out',
+    immediateRender: false,
     scrollTrigger: { trigger: '#areas', start: 'top 95%', once: true, invalidateOnRefresh: true },
     onComplete() { onDone('.area-row'); }
   });
@@ -570,6 +584,7 @@ function initAnimations() {
   // ---- Journal ----
   gsap.from('.journal-card', {
     opacity: 0, y: 24, stagger: 0.12, duration: 0.7, ease: 'power2.out',
+    immediateRender: false,
     scrollTrigger: { trigger: '#journal', start: 'top 95%', once: true, invalidateOnRefresh: true },
     onComplete() { onDone('.journal-card'); }
   });
@@ -577,10 +592,12 @@ function initAnimations() {
   // ---- Contact ----
   gsap.from('.contact-left', {
     opacity: 0, x: -28, duration: 0.9, ease: 'power2.out',
+    immediateRender: false,
     scrollTrigger: { trigger: '#contact', start: 'top 95%', once: true, invalidateOnRefresh: true },
   });
   gsap.from('.contact-form-box', {
     opacity: 0, x: 28, duration: 0.9, ease: 'power2.out',
+    immediateRender: false,
     scrollTrigger: { trigger: '#contact', start: 'top 95%', once: true, invalidateOnRefresh: true },
   });
 
@@ -594,6 +611,7 @@ function initAnimations() {
   document.querySelectorAll('.eyebrow, .display-headline').forEach(el => {
     gsap.from(el, {
       opacity: 0, y: 18, duration: 0.75, ease: 'power2.out',
+      immediateRender: false,
       scrollTrigger: { trigger: el, start: 'top 98%', once: true, invalidateOnRefresh: true },
     });
   });

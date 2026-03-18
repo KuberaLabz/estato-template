@@ -90,6 +90,12 @@ input, textarea, select { font: inherit; }
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--parchment); }
 ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+/* ============================================================
+   ANIMATION SAFETY — visible by default; GSAP animates from invisible
+   ============================================================ */
+.listing-card, .pillar-card, .testimonial-card, .agent-card,
+.area-row, .journal-card, .stat-cell, .approach-left,
+.contact-left, .contact-form-box { opacity: 1; }
 
 /* ============================================================
    CUSTOM CURSOR
@@ -556,7 +562,9 @@ section { position: relative; }
   position: relative;
   z-index: 2;
   padding: 0 0 80px;
-  max-width: 620px;
+  max-width: 560px;
+  text-align: left;
+  align-self: flex-start;
 }
 .hero-eyebrow { margin-bottom: 28px; }
 .hero-headline {
@@ -576,6 +584,7 @@ section { position: relative; }
   line-height: 1.85;
   max-width: 460px;
   margin-bottom: 44px;
+  text-align: left;
 }
 .hero-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 
