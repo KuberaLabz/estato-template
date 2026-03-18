@@ -567,10 +567,10 @@ section { position: relative; }
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 80px 24px 80px clamp(20px, calc((100vw - 1200px)/2 + 44px), 120px);
-  width: 50%;
-  max-width: 600px;
-  min-width: 300px;
+  padding: 0 40px 0 7vw;
+  width: 48%;
+  max-width: 580px;
+  min-width: 280px;
   text-align: left;
 }
 .hero-eyebrow { margin-bottom: 28px; }
