@@ -446,7 +446,7 @@ section { position: relative; }
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   overflow: hidden;
   background: var(--near-black);
   padding-top: 80px; /* clear fixed navbar */
@@ -567,13 +567,11 @@ section { position: relative; }
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 0 0 80px;
-  width: 42%;
-  max-width: 520px;
+  padding: 80px 24px 80px clamp(20px, calc((100vw - 1200px)/2 + 44px), 120px);
+  width: 50%;
+  max-width: 600px;
   min-width: 300px;
   text-align: left;
-  align-self: flex-start;
-  padding-right: 24px; /* extra gutter from illustration */
 }
 .hero-eyebrow { margin-bottom: 28px; }
 .hero-headline {
