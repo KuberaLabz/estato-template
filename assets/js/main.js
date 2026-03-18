@@ -296,7 +296,8 @@ function initNavbar() {
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
-        window.scrollTo({ top: target.offsetTop - 76, behavior: 'smooth' });
+        const yPos = target.getBoundingClientRect().top + window.scrollY - 76;
+        window.scrollTo({ top: yPos, behavior: 'smooth' });
       }
     });
   });
@@ -601,11 +602,8 @@ function initAnimations() {
     scrollTrigger: { trigger: '#contact', start: 'top 95%', once: true, invalidateOnRefresh: true },
   });
 
-  // ---- CTA watermark drift ----
-  gsap.to('.cta-bg-watermark', {
-    x: 80, ease: 'none',
-    scrollTrigger: { trigger: '#cta-banner', scrub: 2.5, start: 'top bottom', end: 'bottom top' },
-  });
+  // ---- CTA watermark drift — static, no scrub (avoids jitter in iframe) ----
+  gsap.set('.cta-bg-watermark', { x: 40 });
 
   // ---- Section headers (eyebrow + headline) ----
   document.querySelectorAll('.eyebrow, .display-headline').forEach(el => {
